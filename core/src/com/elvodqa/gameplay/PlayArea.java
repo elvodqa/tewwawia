@@ -11,7 +11,7 @@ import java.awt.*;
 public class PlayArea {
     public final int width = 640;
     public final int height = 480;
-    private ShapeRenderer shapeRenderer;
+    private final ShapeRenderer shapeRenderer;
 
     public PlayArea() {
         shapeRenderer = new ShapeRenderer();
@@ -22,9 +22,9 @@ public class PlayArea {
         int x = (Gdx.graphics.getWidth()) / 2 - (320);
         int y = (Gdx.graphics.getHeight()) / 2 - (240);
 
-        shapeRenderer.begin(ShapeRenderer.ShapeType.Filled); //I'm using the Filled ShapeType, but remember you have three of them
+        shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
         shapeRenderer.setColor(Color.WHITE);
-        shapeRenderer.rect(x,y,width,height); //assuming you have created those x, y, width and height variables
+        shapeRenderer.rect(x,y,width,height);
         shapeRenderer.end();
 
     }
